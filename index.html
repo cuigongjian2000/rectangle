@@ -24,6 +24,27 @@
     <br>
   </div>
   <script src='//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
-  <script src='./main.js'></script>
+  <script>
+    $(() => {
+    // get dom elem
+    let $width  = $('#width'),
+        $height = $('#height'),
+        $btnCal = $('#calc'),
+        $perimeter = $('#perimeter'),
+        $area   = $('#area');
+    // calc button click
+    $btnCal.click(()=> {
+      // get value
+      let w = Number($width.val()),
+          h = Number($height.val());
+      // calc
+      let p = (w + h) * 2;
+      let a = w * h;
+      
+      $perimeter.val(p);
+      $area.val(a);
+    })
+})
+  </script>
 </body>
 </html>
